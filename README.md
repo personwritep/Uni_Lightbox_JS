@@ -1,5 +1,5 @@
 オークション等の出品画像の子細なチェックに適した、画像の拡大表示機能です。 全サイトを対象に、掲載画像（静止画）を拡大表示します。<br>
 <br>
 扱い方は、以下のマニュアルページを参照ください。<br>
-https://ameblo.jp/personwritep/entry-12798649205.html
+https://ameblo.jp/personwritep/entry-12871389541.html
 
