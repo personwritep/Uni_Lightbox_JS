@@ -261,20 +261,21 @@ function set_img(target, n){
         let img_src=target.getAttribute('src');
         if(img_src){
             let img_src_=picture(target, img_src);
-            if(n==0){
-                img_src=link_img(target, img_src_); } //「not Shift」
+            if(n==1){
+                img_src=img_src_; } //「+Shift」
             else{
-                img_src=img_src_; }} //「+Shift」
+                img_src=link_img(target, img_src_); }} //「not Shift」
         else{ // 兄弟要素のimgを探す
-            let sibling_img=target.parentElement.querySelector('img');
-            if(sibling_img){
-                img_src=sibling_img.getAttribute('src');
-                if(img_src){
-                    img_src=picture(sibling_img, img_src); }}
-            else{ // targetの background-imageの取得を試す
-                let bgr_img=window.getComputedStyle(target).getPropertyValue('background-image');
-                if(bgr_img){
-                    img_src=bgr_img.replace(/^url\(["']?/, '').replace(/["']?\)$/, ''); }}}
+            if(n==1){
+                let sibling_img=target.parentElement.querySelector('img');
+                if(sibling_img){
+                    img_src=sibling_img.getAttribute('src');
+                    if(img_src){
+                        img_src=picture(sibling_img, img_src); }}
+                else{ // targetの background-imageの取得を試す
+                    let bgr_img=window.getComputedStyle(target).getPropertyValue('background-image');
+                    if(bgr_img){
+                        img_src=bgr_img.replace(/^url\(["']?/, '').replace(/["']?\)$/, ''); }}}}
 
         if(img_src=='none'){
             img_src=null; }
@@ -307,7 +308,7 @@ function set_img(target, n){
                     get_url=l_url;
                 }}}
 
-        if(get_url){
+        if(get_url && t_img_src){
             return get_url; }
         else{
             return t_img_src; }
