@@ -10,6 +10,7 @@
 // @exclude        https://*.ameba.jp/*
 // @exclude        https://abema.tv/*
 // @exclude        https://x.com/*
+// @exclude        https://photohito.com/*
 // @noframes
 // @grant        none
 // @updateURL        https://github.com/personwritep/Uni_Lightbox_JS/raw/main/Uni_Lightbox_JS.user.js
